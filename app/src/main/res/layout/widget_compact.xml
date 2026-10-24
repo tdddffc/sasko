@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/widget_bg_clear">
+<ImageView android:id="@+id/fx" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:importantForAccessibility="no" />
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="12dp" android:paddingVertical="8dp">
+<TextView android:id="@+id/emoji" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="34sp" android:includeFontPadding="false" />
+<TextView android:id="@+id/temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:textSize="34sp" android:textStyle="bold" android:includeFontPadding="false" android:maxLines="1" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="10dp">
+<TextView android:id="@+id/loc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:textStyle="bold" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" />
+<TextView android:id="@+id/cond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" />
+<TextView android:id="@+id/c_alert" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:paddingHorizontal="7dp" android:paddingVertical="2dp" android:textSize="11sp" android:textStyle="bold" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:background="@drawable/widget_alert_red" android:textColor="#FFFFFFFF" android:visibility="gone" />
+</LinearLayout>
+<FrameLayout android:id="@+id/refresh_box" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginStart="8dp" android:background="@drawable/widget_refresh_bg" android:contentDescription="Refresh weather">
+<ImageView android:id="@+id/refresh" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_widget_refresh" android:contentDescription="Refresh" />
+<ProgressBar android:id="@+id/refresh_progress" style="?android:attr/progressBarStyleSmall" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:indeterminate="true" android:visibility="gone" />
+</FrameLayout>
+</LinearLayout>
+</FrameLayout>

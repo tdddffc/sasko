@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/widget_bg_clear">
+<ImageView android:id="@+id/fx" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:importantForAccessibility="no" />
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="14dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/loc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/updated" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:alpha="0.85" />
+</LinearLayout>
+<FrameLayout android:id="@+id/refresh_box" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginStart="8dp" android:background="@drawable/widget_refresh_bg" android:contentDescription="Refresh weather">
+<ImageView android:id="@+id/refresh" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_widget_refresh" android:contentDescription="Refresh" />
+<ProgressBar android:id="@+id/refresh_progress" style="?android:attr/progressBarStyleSmall" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:indeterminate="true" android:visibility="gone" />
+</FrameLayout>
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+<TextView android:id="@+id/emoji" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="58sp" android:includeFontPadding="false"  />
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
+<TextView android:id="@+id/temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="50sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/cond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+</LinearLayout>
+<TextView android:id="@+id/wear" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:maxLines="1" android:includeFontPadding="false" android:textSize="22sp" android:autoSizeTextType="uniform" android:autoSizeMinTextSize="12sp" android:autoSizeMaxTextSize="24sp" android:autoSizeStepGranularity="1sp" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" />
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+<TextView android:id="@+id/feels" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="end" />
+<TextView android:id="@+id/hilo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="end" android:layout_marginTop="2dp" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/alert_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="4dp">
+<LinearLayout android:id="@+id/aw_tip_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp" android:paddingHorizontal="10dp" android:paddingVertical="7dp" android:background="@drawable/widget_tip_amber" android:visibility="gone">
+<TextView android:id="@+id/aw_tip_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginEnd="9dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/aw_tip_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:textColor="#3E2723" />
+<TextView android:id="@+id/aw_tip_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11.5sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:textColor="#4E342E" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/aw1_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp" android:paddingHorizontal="10dp" android:paddingVertical="6dp" android:background="@drawable/widget_alert_red">
+<TextView android:id="@+id/aw1_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginEnd="9dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/aw1_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/aw1_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/aw2_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp" android:paddingHorizontal="10dp" android:paddingVertical="6dp" android:background="@drawable/widget_alert_red">
+<TextView android:id="@+id/aw2_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginEnd="9dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/aw2_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/aw2_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/aw3_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp" android:paddingHorizontal="10dp" android:paddingVertical="6dp" android:background="@drawable/widget_alert_red">
+<TextView android:id="@+id/aw3_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginEnd="9dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/aw3_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/aw3_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/aw4_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp" android:paddingHorizontal="10dp" android:paddingVertical="6dp" android:background="@drawable/widget_alert_red">
+<TextView android:id="@+id/aw4_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginEnd="9dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/aw4_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/aw4_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/aw5_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp" android:paddingHorizontal="10dp" android:paddingVertical="6dp" android:background="@drawable/widget_alert_red">
+<TextView android:id="@+id/aw5_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginEnd="9dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/aw5_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/aw5_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/aw6_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp" android:paddingHorizontal="10dp" android:paddingVertical="6dp" android:background="@drawable/widget_alert_red">
+<TextView android:id="@+id/aw6_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginEnd="9dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/aw6_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/aw6_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" />
+</LinearLayout></LinearLayout>
+</LinearLayout>
+<LinearLayout android:id="@+id/hours_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp" android:paddingVertical="7dp" android:paddingHorizontal="4dp" android:background="@drawable/widget_panel_weather">
+<LinearLayout android:id="@+id/h1_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h1_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h1_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h1_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h1_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/h2_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h2_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h2_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h2_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h2_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/h3_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h3_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h3_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h3_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h3_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/h4_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h4_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h4_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h4_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h4_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/h5_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h5_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h5_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h5_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h5_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/h6_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h6_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h6_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h6_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h6_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/h7_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h7_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h7_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h7_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h7_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/h8_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+<TextView android:id="@+id/h8_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+<TextView android:id="@+id/h8_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" android:includeFontPadding="false" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" />
+<TextView android:id="@+id/h8_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/h8_p" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout android:id="@+id/days_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+<LinearLayout android:id="@+id/d1_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="0dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="7dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/d1_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d1_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:includeFontPadding="false" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" />
+<TextView android:id="@+id/d1_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d1_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/d2_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="5dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="7dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/d2_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d2_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:includeFontPadding="false" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" />
+<TextView android:id="@+id/d2_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d2_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/d3_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="5dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="7dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/d3_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d3_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:includeFontPadding="false" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" />
+<TextView android:id="@+id/d3_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d3_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/d4_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="5dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="7dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/d4_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d4_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:includeFontPadding="false" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" />
+<TextView android:id="@+id/d4_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d4_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/d5_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="5dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="7dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/d5_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d5_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:includeFontPadding="false" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" />
+<TextView android:id="@+id/d5_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d5_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/d6_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="5dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="7dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/d6_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d6_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:includeFontPadding="false" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" />
+<TextView android:id="@+id/d6_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d6_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/d7_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="5dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="7dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/d7_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d7_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:includeFontPadding="false" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" />
+<TextView android:id="@+id/d7_t" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" />
+<TextView android:id="@+id/d7_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout android:id="@+id/tiles_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp">
+<LinearLayout android:id="@+id/tiles_row1" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="0dp">
+<LinearLayout android:id="@+id/t1_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="0dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t1_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t1_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t1_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t2_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t2_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t2_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t2_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t3_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t3_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t3_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t3_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t4_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t4_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t4_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t4_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout android:id="@+id/tiles_row2" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="6dp">
+<LinearLayout android:id="@+id/t5_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="0dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t5_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t5_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t5_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t6_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t6_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t6_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t6_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t7_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t7_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t7_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t7_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t8_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t8_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t8_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t8_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout android:id="@+id/tiles_row3" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="6dp">
+<LinearLayout android:id="@+id/t9_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="0dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t9_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t9_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t9_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t10_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t10_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t10_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t10_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t11_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t11_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t11_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t11_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t12_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t12_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t12_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t12_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout android:id="@+id/tiles_row4" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="6dp">
+<LinearLayout android:id="@+id/t13_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="0dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t13_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t13_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t13_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t14_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t14_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t14_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t14_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t15_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t15_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t15_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t15_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+<LinearLayout android:id="@+id/t16_box" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical" android:gravity="center_horizontal" android:paddingVertical="6dp" android:background="@drawable/widget_tile_weather">
+<TextView android:id="@+id/t16_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:includeFontPadding="false"  />
+<TextView android:id="@+id/t16_v" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:gravity="center" android:layout_marginTop="1dp" />
+<TextView android:id="@+id/t16_l" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" android:alpha="0.85" />
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>
+<LinearLayout android:id="@+id/foot_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+<TextView android:id="@+id/sunrise" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" />
+<TextView android:id="@+id/daylight" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="center" />
+<TextView android:id="@+id/sunset" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:gravity="end" />
+</LinearLayout>
+</LinearLayout></FrameLayout>

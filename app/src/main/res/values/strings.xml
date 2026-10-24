@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="widget_weather_description">Weather, hourly strip, alerts and forecast. Resize it up to full screen for more info.</string>
+    <string name="widget_alerts_description">Only your weather alerts: black ice, snow, wind and more.</string>
+    <string name="widget_weather_name">Weather</string>
+    <string name="widget_compact_name">Weather (compact)</string>
+    <string name="widget_compact_description">Small strip: temperature, conditions and your most important alert.</string>
+    <string name="widget_alerts_name">Weather alerts</string>
+</resources>

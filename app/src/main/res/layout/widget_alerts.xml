@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/widget_bg_dark">
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="14dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/a_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="15sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:text="⚠️ Weather alerts" />
+<TextView android:id="@+id/a_sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10.5sp" android:includeFontPadding="false" android:maxLines="1" android:ellipsize="end" android:alpha="0.85" />
+</LinearLayout>
+<FrameLayout android:id="@+id/refresh_box" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginStart="8dp" android:background="@drawable/widget_refresh_bg" android:contentDescription="Refresh weather">
+<ImageView android:id="@+id/refresh" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_widget_refresh" android:contentDescription="Refresh" />
+<ProgressBar android:id="@+id/refresh_progress" style="?android:attr/progressBarStyleSmall" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:indeterminate="true" android:visibility="gone" />
+</FrameLayout>
+</LinearLayout>
+<TextView android:id="@+id/a_empty" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="3" android:ellipsize="end" android:textStyle="bold" android:layout_marginTop="10dp" />
+<LinearLayout android:id="@+id/ar1_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="7dp" android:paddingHorizontal="10dp" android:paddingVertical="7dp" android:background="@drawable/widget_panel_weather">
+<TextView android:id="@+id/ar1_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:includeFontPadding="false" android:layout_marginEnd="10dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/ar1_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/ar1_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:alpha="0.9" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/ar2_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="7dp" android:paddingHorizontal="10dp" android:paddingVertical="7dp" android:background="@drawable/widget_panel_weather">
+<TextView android:id="@+id/ar2_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:includeFontPadding="false" android:layout_marginEnd="10dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/ar2_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/ar2_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:alpha="0.9" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/ar3_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="7dp" android:paddingHorizontal="10dp" android:paddingVertical="7dp" android:background="@drawable/widget_panel_weather">
+<TextView android:id="@+id/ar3_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:includeFontPadding="false" android:layout_marginEnd="10dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/ar3_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/ar3_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:alpha="0.9" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/ar4_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="7dp" android:paddingHorizontal="10dp" android:paddingVertical="7dp" android:background="@drawable/widget_panel_weather">
+<TextView android:id="@+id/ar4_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:includeFontPadding="false" android:layout_marginEnd="10dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/ar4_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/ar4_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:alpha="0.9" />
+</LinearLayout></LinearLayout>
+<LinearLayout android:id="@+id/ar5_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="7dp" android:paddingHorizontal="10dp" android:paddingVertical="7dp" android:background="@drawable/widget_panel_weather">
+<TextView android:id="@+id/ar5_e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:includeFontPadding="false" android:layout_marginEnd="10dp" />
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+<TextView android:id="@+id/ar5_t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="13sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:textStyle="bold" />
+<TextView android:id="@+id/ar5_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:includeFontPadding="false" android:maxLines="2" android:ellipsize="end" android:alpha="0.9" />
+</LinearLayout></LinearLayout>
+</LinearLayout></FrameLayout>

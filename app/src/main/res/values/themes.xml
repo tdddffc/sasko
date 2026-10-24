@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Reliable framework theme (Theme.DeviceDefault.DayNight is not a real AAPT-resolvable
+         resource on all compileSdk versions, which caused the build failure). The in-app
+         Appearance setting (System/Light/Dark) drives the actual visible theme via Compose. -->
+    <style name="Theme.WeatherOnly" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
